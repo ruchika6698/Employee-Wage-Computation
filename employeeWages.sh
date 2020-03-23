@@ -1,18 +1,22 @@
 #!/bin/bash -x
 
+#constant
 PART_TIME_EMPLOYEE=4
 FULL_TIME_EMPLOYEE=8
 WAGE_PER_HOURS=20
 FULL_DAY_HOURS=8
-employeetype=0
 daysEmployeeWorkedInMonth=20
 WorkingHoursForMonth=100
-workingHoursForDay=0
-day=0
 MONTHLY_WORKING_DAYS=20
 MONTHLY_WORKING_HOURS=100
+
+#variable
+workingHoursForDay=0
+day=0
 employeeMonthlyWage=0
 workingHoursForMonth=0
+employeetype=0
+
 
 declare -A dailyWage
 
