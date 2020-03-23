@@ -46,3 +46,26 @@ function employeeType(){
 	printf “$Workhours \n”
 }
 
+Printf “1.Full Time Employee \n”
+Printf “2.Part Time Employee \n”
+read N
+
+#Use Case Statement in function 
+function WorkinghoursforDay() {
+	case $N in
+	1)
+		workHours=$FULL_TIME_HOUR
+		printf "workHours \n"
+	;;
+	2)
+		workHours=$PART_TIME_HOUR
+		printf "workHours \n"
+	;;
+	esac
+
+	if [[ $(( $MONTHLY_MAX_WORKING_HOURS-$workingHoursForMonth )) -lt $FULL_DAY_HOUR ]]
+	then
+		workHours=$PART_TIME_HOUR
+	fi
+	printf "$workHours \n"
+}
