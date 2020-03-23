@@ -36,7 +36,7 @@ function DailyemployeeWage(){
 	echo “$(( $WAGE_PER_HOURS * $FULL_DAY_HOURS ))”
 }
 
-
+#function for employee Working part time or full time
 function employeeType(){
 	employeetype=$(($RANDOM%2))
 	if [ $employeetype -eq 8 ]
