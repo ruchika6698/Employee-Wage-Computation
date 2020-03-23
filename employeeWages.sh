@@ -92,3 +92,4 @@ do
 	(( days++ ))
 	employeeMonthlyWage=$(( $employeeMonthlyWage+$wageforADay ))
 done
+
