@@ -1,13 +1,18 @@
 #!/bin/bash -x
 
-#Constant
 PART_TIME_EMPLOYEE=4
-
 FULL_TIME_EMPLOYEE=8
-
 WAGE_PER_HOURS=20
-
 FULL_DAY_HOURS=8
+employeetype=0
+daysEmployeeWorkedInMonth=20
+WorkingHoursForMonth=100
+workingHoursForDay=0
+day=0
+MONTHLY_WORKING_DAYS=20
+MONTHLY_WORKING_HOURS=100
+employeeMonthlyWage=0
+workingHoursForMonth=0
 
 declare -A dailyWage
 
@@ -69,3 +74,21 @@ function WorkinghoursforDay() {
 	fi
 	printf "$workHours \n"
 }
+
+while [[ $daysEmployeeWorkedInMonth -lt $MONTHLY_WORKING_DAYS ]] && [[ $workingHoursForMonth -lt $MONTHLY_WORKING_HOURS ]]
+do
+	EmployeePresent=$( employeeAttendance )
+	if [ $ EmployeePresent -eq 1 ]
+	then
+		employeeWorkingTime=$( employeeType )
+		WorkinghoursforDay=$( WorkinghoursforDay $workHours )
+		wageforDay=$( DailyemployeeWage $WAGE_PER_HOUR $WorkinghoursforDay )
+		(( daysEmployeeWorkedInMonth++ ))
+		workingHoursForMonth=$(( $workingHoursForMonth+$workHours ))
+	else
+		wageforDay=0
+	fi
+	dailyWage[$days]=$wageforDay
+	(( days++ ))
+	employeeMonthlyWage=$(( $employeeMonthlyWage+$wageforADay ))
+done
