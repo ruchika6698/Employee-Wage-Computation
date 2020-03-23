@@ -93,3 +93,10 @@ do
 	employeeMonthlyWage=$(( $employeeMonthlyWage+$wageforADay ))
 done
 
+for var in ${!dailyWage[@]}
+do
+	echo "Day "$var : ${dailyWage[$var]}
+done
+printf "Employee Wage for the month : $employeeMonthlyWage \n"
+
+
