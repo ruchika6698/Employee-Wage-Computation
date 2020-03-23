@@ -55,7 +55,7 @@ Printf “1.Full Time Employee \n”
 Printf “2.Part Time Employee \n”
 read N
 
-#Use Case Statement in function 
+#Use Case Statement in function and create a function to get working hours 
 function WorkinghoursforDay() {
 	case $N in
 	1)
